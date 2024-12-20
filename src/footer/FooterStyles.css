@@ -1,0 +1,27 @@
+.footer-container {
+    display: flex;
+    height: 10rem;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: bisque;
+}
+
+.logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.copyright-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

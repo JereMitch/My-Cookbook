@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 4.5rem;
+    background-color: #ffa97d;
+    min-width: 100vw;
+  }
+
+.logoContainer {
+    display: inherit;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-family: sans-serif;
+}

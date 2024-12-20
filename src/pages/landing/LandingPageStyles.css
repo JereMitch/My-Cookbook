@@ -1,0 +1,30 @@
+.landing-page-container {
+    display: flex;
+    height: 40rem;
+    width: fit-content;
+    background-color: blanchedalmond;
+}
+
+.welcome-section {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: none;
+    width: 100vw;
+}
+
+.join-us-container {
+    display: inherit;
+    flex-direction: column;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-us-media-container {
+    display: inherit;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
