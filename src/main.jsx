@@ -6,6 +6,8 @@ import App from './App.jsx'
 import ErrorBoundary from './pages/errorBoundary/ErrorBoundary.jsx'
 import Profiles from './pages/profiles/profiles.jsx'
 import Profile from './pages/profiles/Profile.jsx'
+import { ThemeProvider } from '@emotion/react'
+import { theme } from './theme.jsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -28,6 +30,8 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 )

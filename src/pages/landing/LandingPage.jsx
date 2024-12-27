@@ -1,26 +1,30 @@
+// import { useState } from "react"
+import { Grid2 as Grid, Typography } from "@mui/material"
 import Footer from "../../footer/Footer"
 import Header from "../../header/Header"
-import "./LandingPageStyles.css"
+import { LandingHeroContainer, RegistrationInfoBlock } from "./LandingPageStyles.jsx"
+import Textfield from "../../components/textfields/Textfield.jsx"
+import { Button } from "../../components/buttons/Button.jsx"
 
 export default function LandingPage() {
   return (
     <>
       <Header />
-      <div className="landing-page-container">
-          <div className="welcome-section">
-              <div className="join-us-container">
-                  <h5>This is temp text</h5>
-                  <p>I&apos;m so glad you decided to join us!</p>
-                  <button className="register-btn">Register</button>
-              </div>
-              <div className="join-us-media-container">
-                <div className="placeholder-media">I am gonna be an image</div>
-              </div>
-          </div>
-          <div className="additional-info-section">
+        <Grid container sx={{ minHeight: "75vh"}}>
+          <LandingHeroContainer>
+            <Grid sx={{ height: "22.5%", marginTop: "9rem" }}>
+              <Typography variant="h4" sx={{ textAlign: "center" }}>Welcome!</Typography>
+              <RegistrationInfoBlock>Eiusmod eu aute pariatur ullamco dolor incididunt. Consectetur occaecat eu cillum non deserunt enim commodo voluptate reprehenderit elit laboris. Aliqua proident enim pariatur amet commodo ipsum nisi. Nulla ad aute reprehenderit esse sit. Consequat sint proident reprehenderit fugiat est aliqua nulla. Tempor laboris irure ipsum esse excepteur irure. Velit aute sunt officia amet laborum Lorem proident aliquip.</RegistrationInfoBlock>
+            </Grid>
+            <Grid>
+              <Textfield label="example@email.com" name="registerTextField" />
+              <Button sx={{ marginTop: "0.5rem" }}>Register</Button>
+            </Grid>
+          </LandingHeroContainer>
+          <LandingHeroContainer>
 
-          </div>
-      </div>
+          </LandingHeroContainer>
+        </Grid>
       <Footer />
     </>
   )

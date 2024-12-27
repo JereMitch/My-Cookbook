@@ -2,22 +2,34 @@
     display: flex;
     position: sticky;
     top: 0;
-    height: 4.5rem;
-    background-color: #ffa97d;
+    height: 4.75rem;
+    background-color: var();
     min-width: 100vw;
   }
 
 .logoContainer {
     display: inherit;
     align-items: center;
+    margin-left: 2rem;
 }
 
 .logo {
-    display: flex;
+    display: inherit;
     padding-left: 1rem;
     cursor: pointer;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
 }
 
-.logo-text {
-    font-family: sans-serif;
+.logo-bold-text {
+    font-family: "Roboto Condensed", serif;
+    letter-spacing: -0.05rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.logo-light-text {
+    font-family: "Shadows Into Light", serif;
+    text-transform: lowercase;
 }
