@@ -8,21 +8,33 @@ import Profiles from './pages/profiles/profiles.jsx'
 import Profile from './pages/profiles/Profile.jsx'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme.jsx'
+import Dashboard from './pages/dashboard/Dashboard.jsx'
+import LandingPage from './pages/landing/LandingPage.jsx'
 
-const router = createBrowserRouter([{
-  path: "/",
+const router = createBrowserRouter([
+  {
   element: <App />,
-  errorElement: <ErrorBoundary />
-},
-{
-  path: "/profiles",
-  element: <Profiles />,
   children: [
+    { 
+      path: "/", 
+      element: <LandingPage />,
+    },
     {
-      path: "/profiles/:profileId",
-      element: <Profile />
+      path: "/dashboard",
+      element: <Dashboard />,
+    },
+    {
+      path: "/profiles",
+      element: <Profiles />,
+      children: [
+        {
+          path: "/profiles/:profileId",
+          element: <Profile />
+        },
+      ],
     },
   ],
+  errorElement: <ErrorBoundary />
 },
 ]);
 

@@ -1,26 +1,42 @@
-import { Grid2, styled, Typography } from "@mui/material";
+import { Grid2, styled, Tab, Typography } from "@mui/material";
+
+const RegistrationInfoBlockContainer = styled(Grid2)({
+    display: "flex",
+    flexDirection: "row"
+})
 
 const RegistrationInfoBlock = styled(Typography)({
-    width: "fit-content",
-    maxWidth: "fit-content",
-    height: "80%",
     wordWrap: "break-word",
     overflow: "hidden",
     overflowY: "hidden scroll",
-    textAlign: "center",
+    textAlign: "left",
     padding: "0 5rem",
     marginTop: "1rem",
 })
 
-const LandingHeroContainer = styled(Grid2)({
-    width: "50%",
-    height: "50rem",
+const StyledTab = styled(Tab)(({ theme, color = "primary" }) => ({
+    "&:hover": {
+        color: theme.palette[color].main,
+    }
+}))
+
+const StyledSectionContainer = styled(Grid2)({
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    minWidth: "75vw",
+    minHeight: "45vh",
 })
+
+const StyledSection = styled(Grid2)(({ width }) => ({
+    display: "inherit",
+    width: width? width : "40%",
+    flexDirection: "column",
+    padding: "1.5rem 3rem",
+}))
 
 export {
     RegistrationInfoBlock,
-    LandingHeroContainer
+    RegistrationInfoBlockContainer,
+    StyledTab,
+    StyledSectionContainer,
+    StyledSection,
 }

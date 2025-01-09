@@ -1,6 +1,6 @@
 import "./FooterStyles.css"
 
-export default function Footer() {
+export default function LandingFooter() {
   return (
     <div className="footer-container">
         <div className="logo-section">
